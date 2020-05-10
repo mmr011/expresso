@@ -1,7 +1,7 @@
 const express = require('express');
 const menuRouter = express.Router();
 const sqlite3 = require('sqlite3');
-const db = new sqlite3.Database(process.env.TEST_DATABASE || '../database.sqlite');
+const db = new sqlite3.Database(process.env.TEST_DATABASE || './database.sqlite');
 const menuItemRouter = require('./menuItem');
 
 menuRouter.param('menuId', (req, res, next, menuId) => {
